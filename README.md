@@ -2,7 +2,7 @@
 
 Battle-tested Proxmox VE management toolkit — helper scripts, API patterns, and operational knowledge built from running a 46-guest cluster daily.
 
-Works standalone, or as a reference for AI coding agents (Claude Code, Claude Desktop, OpenClaw, etc).
+Works standalone, or as a knowledge base for AI coding agents (Claude Code, Claude Desktop, OpenClaw, Cursor, etc).
 
 ## What's Inside
 
@@ -58,17 +58,29 @@ chmod 600 ~/.proxmox-credentials
 
 ## Using with AI Agents
 
-### Claude Code / Claude Desktop
+The knowledge is in plain markdown and shell scripts — no framework lock-in. Here's how to wire it into your setup:
 
-Add to your project or reference directory. Claude will pick up `SKILL.md` as context for Proxmox operations:
+### Claude Code
+
+Clone into your project and reference it in your project memory. Claude Code auto-loads `CLAUDE.md` at session start, so a one-liner is all you need:
 
 ```bash
-# Clone into your project
 git clone https://github.com/eddygk/proxmox-ops-skill.git proxmox-ops
-
-# Or reference in CLAUDE.md
-echo "For Proxmox operations, see proxmox-ops/SKILL.md" >> CLAUDE.md
+echo "For Proxmox operations, read proxmox-ops/SKILL.md and proxmox-ops/references/provisioning.md" >> CLAUDE.md
 ```
+
+Or add it as a modular rule:
+
+```bash
+mkdir -p .claude/rules
+cp proxmox-ops/SKILL.md .claude/rules/proxmox.md
+```
+
+### Claude Desktop (Projects)
+
+1. Create a new Project (or open an existing one)
+2. Click **"Set custom instructions"** and add: *"For Proxmox operations, follow the knowledge files."*
+3. Upload `SKILL.md` and `references/provisioning.md` as project knowledge files
 
 ### OpenClaw / ClawHub
 
@@ -76,9 +88,9 @@ echo "For Proxmox operations, see proxmox-ops/SKILL.md" >> CLAUDE.md
 clawhub install proxmox-ops
 ```
 
-### Any Agent
+### Cursor / Windsurf / Other Agents
 
-The knowledge is in plain markdown and shell scripts — no framework lock-in. Point your agent at `SKILL.md` and it knows how to operate Proxmox safely.
+Drop `SKILL.md` into your project's context directory or reference it in whatever custom instructions mechanism your editor supports. The content is standard markdown — it works anywhere.
 
 ## License
 
