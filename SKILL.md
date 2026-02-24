@@ -18,7 +18,7 @@ description: |
   Network: connects to user-configured Proxmox host only (HTTPS, TLS verification disabled for self-signed certs).
 
   Helper script: scripts/pve.sh (relative to this skill)
-metadata: { "openclaw": { "emoji": "🖥️", "requires": { "bins": ["curl", "jq"] }, "os": ["darwin", "linux"] } }
+metadata: { "openclaw": { "emoji": "🖥️", "homepage": "https://github.com/eddygk/proxmox-ops-skill", "requires": { "bins": ["curl", "jq"] }, "os": ["darwin", "linux"] } }
 ---
 
 # Proxmox VE Management
