@@ -19,7 +19,7 @@ description: |
   Network: connects to user-configured PROXMOX_HOST only (HTTPS). TLS verification is disabled (-k) because Proxmox VE ships with self-signed certificates by default — standard practice per Proxmox documentation (https://pve.proxmox.com/wiki/Certificate_Management). Use a trusted CA certificate and remove the -k flag if your environment supports it.
 
   Helper script: scripts/pve.sh (relative to this skill)
-metadata: { "openclaw": { "emoji": "🖥️", "homepage": "https://github.com/eddygk/proxmox-ops-skill", "requires": { "bins": ["curl", "jq"] }, "os": ["darwin", "linux"] } }
+metadata: { "openclaw": { "emoji": "🖥️", "homepage": "https://github.com/eddygk/proxmox-ops-skill", "requires": { "bins": ["curl", "jq"], "env": ["PROXMOX_HOST", "PROXMOX_TOKEN_ID", "PROXMOX_TOKEN_SECRET"] }, "os": ["darwin", "linux"] } }
 ---
 
 # Proxmox VE Management
