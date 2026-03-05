@@ -92,6 +92,12 @@ clawhub install proxmox-ops
 
 Drop `SKILL.md` into your project's context directory or reference it in whatever custom instructions mechanism your editor supports. The content is standard markdown — it works anywhere.
 
+## Credits
+
+The `scripts/pve.sh` helper script originates from [weird-aftertaste/proxmox](https://clawhub.com/skills/proxmox) on ClawHub and is used with appreciation. This skill extends it with additional operational patterns, provisioning workflows, disk resize guidance, and guest agent support.
+
+Additional reference material drawn from [mSarheed/proxmox-full](https://clawhub.com/skills/proxmox-full).
+
 ## License
 
 MIT

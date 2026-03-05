@@ -1,5 +1,7 @@
 #!/bin/bash
 # Proxmox VE helper script
+# Based on weird-aftertaste/proxmox (ClawHub) — https://clawhub.com/skills/proxmox
+# Extended by eddygk/proxmox-ops with provisioning, disk resize, guest agent, and operational patterns.
 
 set -euo pipefail
 
