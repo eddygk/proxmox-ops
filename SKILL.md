@@ -66,6 +66,7 @@ pve.sh snap <vmid> [name]  # Create snapshot (disk-only, safe)
 pve.sh snapshots <vmid>    # List snapshots
 pve.sh tasks <node>        # Show recent tasks
 pve.sh storage <node>      # Show storage status
+pve.sh ips [prefix]        # List configured IPs across cluster (e.g. "10.10.20")
 ```
 
 ## Workflow
