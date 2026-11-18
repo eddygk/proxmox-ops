@@ -51,7 +51,7 @@ Use UniFi/Mikrotik/pfSense client list, OPNsense leases, or an `arp-scan`/`nmap 
 Final sanity check from a host on the same VLAN. Free IPs typically return ~1/N packets at ~3000 ms latency (gateway sending ICMP host-unreachable after ARP fails); real hosts return 100% replies at normal RTT.
 
 ```bash
-ping -c 3 -W 500 10.10.20.65
+ping -c 3 -W 500 <candidate-ip>
 ```
 
 ### What each source misses
