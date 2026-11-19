@@ -1,27 +1,9 @@
 ---
 name: proxmox-ops
-description: |
-  Ops-focused Proxmox VE management via REST API — monitor, control, provision, and troubleshoot VMs and LXC containers with battle-tested operational patterns.
-
-  Use when asked to:
-  - List, start, stop, restart VMs or LXC containers
-  - Check node status, cluster health, or resource usage
-  - Create, clone, or delete VMs and containers
-  - Manage snapshots, backups, storage, or templates
-  - Resize disks (API + in-guest filesystem steps)
-  - Query guest agent for IP addresses
-  - View tasks or system event logs
-
-  Includes helper script (pve.sh) with auto node discovery from VMID, operational safety gates (read-only vs reversible vs destructive), vmstate snapshot warnings, post-resize guest filesystem steps, and a separate provisioning reference.
-
-  Requires: curl, jq.
-  Credentials: PROXMOX_HOST, PROXMOX_TOKEN_ID, PROXMOX_TOKEN_SECRET — set as env vars or stored in ~/.proxmox-credentials (sourced at runtime, user-created, mode 600).
-  Writes: ~/.proxmox-credentials (user-created, API token, mode 600).
-  Network: connects to user-configured Proxmox host only (HTTPS, TLS verification disabled for self-signed certs).
-
-  Helper script: scripts/pve.sh (relative to this skill)
-  Configuration: ~/.proxmox-credentials
-metadata: { "openclaw": { "emoji": "🖥️", "homepage": "https://github.com/eddygk/proxmox-ops-skill", "requires": { "bins": ["curl", "jq"] }, "os": ["darwin", "linux"] } }
+description: >-
+  Ops-focused Proxmox VE management via REST API: monitor, control, provision and troubleshoot VMs and LXC containers. Use to list, start, stop or restart guests; check node status, cluster health or resource usage; create, clone or delete VMs and containers; manage snapshots, backups, storage or templates; resize disks (API plus in-guest filesystem steps); query the guest agent for IPs; view tasks or event logs. Includes scripts/pve.sh (auto node discovery from VMID, read-only/reversible/destructive safety gates, vmstate snapshot warnings) and a provisioning reference. Requires curl, jq and PROXMOX_HOST, PROXMOX_TOKEN_ID, PROXMOX_TOKEN_SECRET (env vars or ~/.proxmox-credentials, mode 600). Connects only to the configured host (HTTPS, TLS verification disabled for self-signed certs).
+metadata:
+  openclaw: "{\"emoji\":\"🖥️\",\"homepage\":\"https://github.com/eddygk/proxmox-ops-skill\",\"requires\":{\"bins\":[\"curl\",\"jq\"]},\"os\":[\"darwin\",\"linux\"]}"
 ---
 
 # Proxmox VE Management
