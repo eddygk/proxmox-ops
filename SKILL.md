@@ -2,8 +2,7 @@
 name: proxmox-ops
 description: >-
   Ops-focused Proxmox VE management via REST API: monitor, control, provision and troubleshoot VMs and LXC containers. Use to list, start, stop or restart guests; check node status, cluster health or resource usage; create, clone or delete VMs and containers; manage snapshots, backups, storage or templates; resize disks (API plus in-guest filesystem steps); query the guest agent for IPs; view tasks or event logs. Includes scripts/pve.sh (auto node discovery from VMID, read-only/reversible/destructive safety gates, vmstate snapshot warnings) and a provisioning reference. Requires curl, jq and PROXMOX_HOST, PROXMOX_TOKEN_ID, PROXMOX_TOKEN_SECRET (env vars or ~/.proxmox-credentials, mode 600). Connects only to the configured host (HTTPS, TLS verification disabled for self-signed certs).
-metadata:
-  openclaw: "{\"emoji\":\"🖥️\",\"homepage\":\"https://github.com/eddygk/proxmox-ops-skill\",\"requires\":{\"bins\":[\"curl\",\"jq\"]},\"os\":[\"darwin\",\"linux\"]}"
+metadata: { "openclaw": { "emoji": "🖥️", "homepage": "https://github.com/eddygk/proxmox-ops-skill", "requires": { "bins": ["curl", "jq"] }, "os": ["darwin", "linux"] } }
 ---
 
 # Proxmox VE Management
